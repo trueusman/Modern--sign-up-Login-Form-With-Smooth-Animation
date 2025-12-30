@@ -1,0 +1,146 @@
+/* ====== Reset ====== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+/* ====== Background ====== */
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: radial-gradient(circle at top left, #141e30, #243b55);
+  overflow: hidden;
+}
+
+/* ====== Card Container ====== */
+.container {
+  width: 400px;
+  height: 500px;
+  perspective: 1000px;
+}
+
+/* ====== Card Flip Animation ====== */
+.card {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 0.9s cubic-bezier(0.4, 0.2, 0.2, 1);
+}
+
+.card.flip {
+  transform: rotateY(180deg);
+}
+
+/* ====== Shared Styles ====== */
+.form-box {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.1);
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  border-radius: 20px;
+  backdrop-filter: blur(20px);
+  color: white;
+  padding: 50px 40px;
+  text-align: center;
+  backface-visibility: hidden;
+  box-shadow: 0 0 30px rgba(0, 255, 255, 0.2);
+}
+
+h2 {
+  font-size: 2rem;
+  margin-bottom: 30px;
+  letter-spacing: 1px;
+}
+
+/* ====== Input Fields ====== */
+.input-box {
+  position: relative;
+  margin: 20px 0;
+}
+
+.input-box input {
+  width: 100%;
+  padding: 12px;
+  background: transparent;
+  border: none;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.5);
+  color: white;
+  font-size: 1rem;
+  outline: none;
+  transition: 0.3s;
+}
+
+.input-box input:focus {
+  border-bottom-color: #00ffff;
+  box-shadow: 0 5px 15px rgba(0, 255, 255, 0.2);
+}
+
+.input-box label {
+  position: absolute;
+  left: 0;
+  top: 12px;
+  color: rgba(255, 255, 255, 0.7);
+  pointer-events: none;
+  transition: 0.3s;
+}
+
+.input-box input:focus + label,
+.input-box input:valid + label {
+  top: -10px;
+  font-size: 0.8rem;
+  color: #00ffff;
+}
+
+/* ====== Buttons ====== */
+button {
+  margin-top: 20px;
+  width: 100%;
+  padding: 12px;
+  background: linear-gradient(45deg, #00ffff, #007bff);
+  border: none;
+  border-radius: 25px;
+  color: white;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  background: linear-gradient(45deg, #007bff, #00ffff);
+  transform: scale(1.05);
+  box-shadow: 0 0 20px #00ffff;
+}
+
+/* ====== Login Form ====== */
+.login-box {
+  transform: rotateY(0deg);
+}
+
+/* ====== Signup Form ====== */
+.signup-box {
+  transform: rotateY(180deg);
+}
+
+/* ====== Switch Links ====== */
+.toggle {
+  margin-top: 25px;
+  font-size: 0.9rem;
+}
+
+.toggle a {
+  color: #00ffff;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s;
+}
+
+.toggle a:hover {
+  color: #ffffff;
+}

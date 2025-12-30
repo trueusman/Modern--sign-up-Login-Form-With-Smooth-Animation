@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Animated Login & Signup Form</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+  <div class="card" id="card">
+    <!-- ====== Login Form ====== -->
+    <div class="form-box login-box">
+      <h2>Login</h2>
+      <form>
+        <div class="input-box">
+          <input type="email" required>
+          <label>Email</label>
+        </div>
+        <div class="input-box">
+          <input type="password" required>
+          <label>Password</label>
+        </div>
+        <button type="submit">Login</button>
+        <div class="toggle">
+          <p>Don't have an account? <a href="#" id="showSignUp">Sign Up</a></p>
+        </div>
+      </form>
+    </div>
+
+    <!-- ====== Signup Form ====== -->
+    <div class="form-box signup-box">
+      <h2>Sign Up</h2>
+      <form>
+        <div class="input-box">
+          <input type="text" required>
+          <label>Username</label>
+        </div>
+        <div class="input-box">
+          <input type="email" required>
+          <label>Email</label>
+        </div>
+        <div class="input-box">
+          <input type="password" required>
+          <label>Password</label>
+        </div>
+        <button type="submit">Register</button>
+        <div class="toggle">
+          <p>Already have an account? <a href="#" id="showLogin">Login</a></p>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+<script src="script.js">
+</script>
+
+</body>
+</html>
